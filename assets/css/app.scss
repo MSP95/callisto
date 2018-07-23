@@ -1,0 +1,71 @@
+// /* This file is for your main application css. */
+
+@import "bootstrap";
+@import "./nav";
+@import "./collapse";
+@import "./ham";
+
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Fjalla+One|Pacifico');
+body{
+  background-color: $white;
+  color: $black;
+
+}
+
+.container{
+  padding: 5px;
+}
+@media (min-width: 1500px) {
+.container {
+    max-width: 1450px;
+}
+}
+@media (min-width: 1366px) {
+.container {
+    max-width: 1350px;
+}
+}
+
+/////////////////////////////////////////////////
+.content-wrapper{
+  border: 2px solid $mycyan;
+  transition: all 0.3s;
+
+}
+.nav-item{
+  display: flex;
+  align-content: space-around;
+  flex-direction: column;
+
+}
+.connector-wrapper{
+  background-color: transparent;
+  align-self: center;
+  height: 1.4rem;
+}
+.connector{
+  background-color: $mycyan;
+  width: 2px;
+  height: 0rem;
+  align-self: center;
+  transition: height 0.3s;
+
+}
+.connector-active{
+  background-color: $mycyan;
+  height: 1.4rem;
+  width: 2px;
+
+  transition: height 0.3s;
+  transition-delay: 0.3s;
+}
+
+@media (max-width: 512px) {
+  .sidebar {
+
+  }
+  .sidebar.active {
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+}
