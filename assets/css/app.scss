@@ -1,35 +1,64 @@
+@import "bootstrap";
 // /* This file is for your main application css. */
 
-@import "bootstrap";
 @import "./nav";
 @import "./collapse";
 @import "./ham";
-
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Fjalla+One|Pacifico');
+@import "./pageTransition";
+@import "./projects";
+@import "./about";
+@import "./theme";
+@import "./scrollbar";
+html{
+  overflow-y: scroll;
+}
 body{
+
   background-color: $white;
   color: $black;
+  // overflow-x:hidden;
+  font-family: 'Rajdhani', sans-serif;
 
+  // font-family: 'Roboto Condensed', sans-serif;
+  // font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.3rem;
 }
 
 .container{
   padding: 5px;
 }
 @media (min-width: 1500px) {
-.container {
+  .container {
     max-width: 1450px;
-}
+  }
 }
 @media (min-width: 1366px) {
-.container {
+  .container {
     max-width: 1350px;
-}
+  }
 }
 
+
 /////////////////////////////////////////////////
-.content-wrapper{
-  border: 2px solid $mycyan;
-  transition: all 0.3s;
+.transition-group{
+
+
+  position: relative;
+
+
+}
+.content-wradpper{
+  // border: 2px solid $mycyan;
+
+}
+.dcontent-wradpper{
+  // border: 2px solid $mycyan;
+  // transition: all 0.3s;
+  // z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 
 }
 .nav-item{
@@ -42,10 +71,11 @@ body{
   background-color: transparent;
   align-self: center;
   height: 1.4rem;
+  clip-path: polygon(40% 80%, 40% 0, 60% 0, 60% 80%, 98% 75%, 50% 100%, 0 76%);
 }
 .connector{
   background-color: $mycyan;
-  width: 2px;
+  width: 10px;
   height: 0rem;
   align-self: center;
   transition: height 0.3s;
@@ -54,18 +84,14 @@ body{
 .connector-active{
   background-color: $mycyan;
   height: 1.4rem;
-  width: 2px;
+  width: 10px;
 
   transition: height 0.3s;
   transition-delay: 0.3s;
 }
 
-@media (max-width: 512px) {
-  .sidebar {
-
-  }
-  .sidebar.active {
-    margin-left: 0;
-    transition: all 0.3s;
-  }
+.foobar{
+  // background-color: YELLOW;
+  height: 3rem;
+  width: 100%;
 }

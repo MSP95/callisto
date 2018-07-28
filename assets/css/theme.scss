@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:500');
+// DAY
+$black: black;
+$white: white;
+$mycyan: #006769;
+
+// NIGHT
+// $black: white;
+// $white: black;
+// $mycyan: #00CED1;
+// $dpBorder:white;
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        will-change: transform;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        will-change: transform;
+    }
+  }
+  @keyframes slide-right {
+      0% {
+          opacity: 0;
+          transform: translateX(20px);
+          will-change: transform;
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+          will-change: transform;
+      }
+    }

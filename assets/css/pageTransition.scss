@@ -1,0 +1,74 @@
+@import "./theme";
+
+.fade-enter {
+  opacity: 0;
+
+  transition: all 250ms ease-in;
+  // background-color: red;
+  // transform: translateX(600px);
+
+  // transform: translateY(500px);
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  // transform: translateX(0px);
+  // transform: translateY(0px);
+
+  transition: all 300ms ease-out;
+}
+
+.fade-exit{
+  opacity: 1;
+
+}
+.fade-exit.fade-exit-active {
+  // transform: translateX(-600px);
+  // border: 10px solid black;
+  opacity: 0;
+  // z-index: -100;
+  transition: all 300ms ease-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .fade-enter {
+//   opacity: 0;
+//
+//   transition: all 250ms ease-in;
+//   // background-color: red;
+//   transform: translateX(500px) skewX(20deg);
+//   // transform: translateY(500px);
+// }
+//
+// .fade-enter.fade-enter-active {
+//   opacity: 1;
+//   transform: translateX(0px) skewX(0deg);
+//   // transform: translateY(0px);
+//
+//   transition: transform 400ms ease-in, opacity 1s;
+// }
+//
+// .fade-exit{
+//   opacity: 1;
+//
+// }
+// .fade-exit.fade-exit-active {
+// transform: translateX(-500px) skewX(20deg);
+//   // border: 10px solid black;
+//   opacity: 0;
+//   transition: all 300ms ease-out;
+//
+// }

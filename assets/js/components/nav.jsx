@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-import { Nav, Button,  NavItem, NavbarBrand, Navbar, Collapse, NavbarToggler } from 'reactstrap';
+import { Nav, Button,  NavItem, NavbarBrand, Navbar, Collapse, Fade, NavbarToggler } from 'reactstrap';
 import { withRouter } from 'react-router-dom'
 
 function NavBar(props) {
@@ -27,7 +27,7 @@ function NavBar(props) {
       <Navbar color="light" className=" p-0" light expand="md">
 
         <div className="mobile-navbar navbar-toggler p-0 pb-1">
-          <div className={"mobile-title nav-link "+(!props.navBar.collapse? "navbar-open nav-btn-active":"")}>
+          <div className={"mobile-title nav-link "+(!props.navBar.collapse? "":"")}>
             {props.location.pathname}
 
 
@@ -38,27 +38,19 @@ function NavBar(props) {
 
           </div>
 
-          <div id="nav-icon4" className="mobile-ham" onClick={hamburger} >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-
-          </div>
         </div>
-        <Collapse className="navbar-collapse" isOpen={props.navBar.collapse} >
-          <div className="collapses p-0">
+        <Fade className="navbar-collapse" in={props.navBar.collapse}  >
+
             <Nav className="">
 
               <NavItem>
 
 
-                <NavLink to="/about" exact activeClassName="nav-btn-active" className="nav-link" onClick={hamburger}>
+                <NavLink to="/" exact activeClassName="nav-btn-active" className="nav-link" onClick={hamburger}>
                   <div className="material-icons md-48">About</div>
                 </NavLink>
                 <div className="connector-wrapper">
-                  <div className={"connector"+(props.location.pathname === "/about"? " connector-active" : "")}></div>
+                  <div className={"connector"+(props.location.pathname === "/"? " connector-active" : "")}></div>
                 </div>
               </NavItem>
               <NavItem>
@@ -82,8 +74,8 @@ function NavBar(props) {
                 </div>
               </NavItem>
             </Nav>
-          </div>
-        </Collapse>
+
+        </Fade>
       </Navbar>
 
     </div>
@@ -93,3 +85,4 @@ function NavBar(props) {
 
 // onMouseEnter={()=>{if ( $( ".sidebar" ).hasClass( "active" )){$('.sidebar').toggleClass('active')}} }
 export default withRouter(connect((state)=>state)(NavBar));
+// <div className="collapses p-0">

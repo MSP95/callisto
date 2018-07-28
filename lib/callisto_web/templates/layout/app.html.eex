@@ -9,20 +9,22 @@
 
   <title>Hello Callisto!</title>
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> -->
 </head>
 
 <body>
 
 
-    <main class="container-fluid p-0" role="main">
-      <%= if get_flash(@conn, :info) do %>
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <% end %>
-      <%= if get_flash(@conn, :error) do %>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <% end %>
-      <%= render @view_module, @view_template, assigns %>
-    </main>
+  <main class="container-fluid p-0" role="main">
+    <%= if get_flash(@conn, :info) do %>
+    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+    <% end %>
+    <%= if get_flash(@conn, :error) do %>
+    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+    <% end %>
+    <%= render @view_module, @view_template, assigns %>
+  </main>
 
   <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 </body>
