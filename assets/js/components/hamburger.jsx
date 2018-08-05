@@ -17,12 +17,13 @@ function Ham(props) {
 
       $('#nav-icon4').toggleClass('open');
       props.dispatch({type: 'TOGGLE_NAV'})
+      console.log("hi");
     }
   }
 
   return (
     <div className="mobile-ham">
-      <div id="nav-icon2" onClick={hamburger} >
+      <div id="nav-icon4" onClick={hamburger} >
 
         <span></span>
         <span></span>

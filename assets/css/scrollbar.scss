@@ -1,19 +1,19 @@
 @import "./theme";
 /* width */
 ::-webkit-scrollbar {
-    width: 5px;
-    margin-right: 5px;
+    width: 3px;
+    // margin-right: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $white;
+    background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: $mycyan;
-    border-radius: 10px;
+
 
 }
 

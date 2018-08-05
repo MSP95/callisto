@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:500');
-// DAY
-$black: black;
-$white: white;
-$mycyan: #006769;
+// // DAY
+// $black: black;
+// $white: white;
+// $mycyan: #006769;
 
 // NIGHT
 // $black: white;
 // $white: black;
 // $mycyan: #00CED1;
 // $dpBorder:white;
+
+// t3
+$black: white;
+$white: transparent;
+$mycyan: white;
+$dpBorder:white;
 
 @keyframes slide-up {
     0% {
@@ -32,5 +38,13 @@ $mycyan: #006769;
           opacity: 1;
           transform: translateY(0);
           will-change: transform;
+      }
+    }
+    @mixin transition {
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          // color: hsl(80  / $i, 100%, 80%);
+          transition: all .2s #{$i * .1}s ease-out;
+        }
       }
     }

@@ -26,19 +26,7 @@ function NavBar(props) {
     <div className="">
       <Navbar color="light" className=" p-0" light expand="md">
 
-        <div className="mobile-navbar navbar-toggler p-0 pb-1">
-          <div className={"mobile-title nav-link "+(!props.navBar.collapse? "":"")}>
-            {props.location.pathname}
 
-
-
-            <div className="connector-wrapper-exception">
-              <div className="connector-exception connector-active-exception"/>
-            </div>
-
-          </div>
-
-        </div>
         <Fade className="navbar-collapse" in={props.navBar.collapse}  >
 
             <Nav className="">
@@ -59,13 +47,7 @@ function NavBar(props) {
                   <div className={"connector"+(props.location.pathname === "/projects"? " connector-active" : "")}></div>
                 </div>
               </NavItem>
-              <NavItem>
 
-                <NavLink to="/skills" exact activeClassName="nav-btn-active" className="nav-link" onClick={hamburger}><div className="material-icons md-48">Skills</div></NavLink>
-                <div className="connector-wrapper">
-                  <div className={"connector"+(props.location.pathname === "/skills"? " connector-active" : "")}></div>
-                </div>
-              </NavItem>
               <NavItem>
 
                 <NavLink to="/contact" exact activeClassName="nav-btn-active" className="nav-link" onClick={hamburger}><div className="material-icons md-48">Contact</div></NavLink>
@@ -85,4 +67,10 @@ function NavBar(props) {
 
 // onMouseEnter={()=>{if ( $( ".sidebar" ).hasClass( "active" )){$('.sidebar').toggleClass('active')}} }
 export default withRouter(connect((state)=>state)(NavBar));
-// <div className="collapses p-0">
+// <NavItem>
+//
+//   <NavLink to="/skills" exact activeClassName="nav-btn-active" className="nav-link" onClick={hamburger}><div className="material-icons md-48">Skills</div></NavLink>
+//   <div className="connector-wrapper">
+//     <div className={"connector"+(props.location.pathname === "/skills"? " connector-active" : "")}></div>
+//   </div>
+// </NavItem>

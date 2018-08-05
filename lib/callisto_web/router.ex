@@ -15,8 +15,9 @@ defmodule CallistoWeb.Router do
 
   scope "/", CallistoWeb do
     pipe_through :browser # Use the default browser stack
-    get "/:key", PageController, :index
     get "/", PageController, :index
+    get "/:key", PageController, :index
+    get "/projects/:key", PageController, :index
   end
 
   # Other scopes may use custom stacks.
