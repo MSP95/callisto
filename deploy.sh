@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export PORT=5410
+export PORT=5422
 export MIX_ENV=prod
-export GIT_PATH=/home/jobPortal/src/jobPortal
+export GIT_PATH=/home/manish/src/callisto
 
 PWD=`pwd`
 if [ $PWD != $GIT_PATH ]; then
@@ -11,8 +11,8 @@ if [ $PWD != $GIT_PATH ]; then
 	exit 1
 fi
 
-if [ $USER != "jobPortal" ]; then
-	echo "Error: must run as user 'jobPortal'"
+if [ $USER != "manish" ]; then
+	echo "Error: must run as user 'manish'"
 	echo "  Current user is $USER"
 	exit 2
 fi
@@ -27,17 +27,17 @@ mkdir -p ~/www
 mkdir -p ~/old
 
 NOW=`date +%s`
-if [ -d ~/www/jobPortal ]; then
-	echo mv ~/www/jobPortal ~/old/$NOW
-	mv ~/www/jobPortal ~/old/$NOW
+if [ -d ~/www/callisto ]; then
+	echo mv ~/www/callisto ~/old/$NOW
+	mv ~/www/callisto ~/old/$NOW
 fi
 
-mkdir -p ~/www/jobPortal
-REL_TAR=~/src/jobPortal/_build/prod/rel/jobPortal/releases/0.0.1/jobPortal.tar.gz
-(cd ~/www/jobPortal && tar xzvf $REL_TAR)
+mkdir -p ~/www/callisto
+REL_TAR=~/src/callisto/_build/prod/rel/jobPortal/releases/0.0.1/callisto.tar.gz
+(cd ~/www/callisto && tar xzvf $REL_TAR)
 
 crontab - <<CRONTAB
-@reboot bash /home/jobPortal/src/jobPortal/start.sh
+@reboot bash /home/manish/src/jobPortal/start.sh
 CRONTAB
 
 #. start.sh

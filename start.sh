@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export PORT=5410
+export PORT=5422
 
-cd ~/www/jobPortal
-./bin/jobPortal stop || true
-./bin/jobPortal start
+cd ~/www/callisto
+./bin/callisto stop || true
+./bin/callisto start
