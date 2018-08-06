@@ -33,11 +33,11 @@ if [ -d ~/www/callisto ]; then
 fi
 
 mkdir -p ~/www/callisto
-REL_TAR=~/src/callisto/_build/prod/rel/jobPortal/releases/0.0.1/callisto.tar.gz
+REL_TAR=~/src/callisto/_build/prod/rel/callisto/releases/0.0.1/callisto.tar.gz
 (cd ~/www/callisto && tar xzvf $REL_TAR)
 
 crontab - <<CRONTAB
-@reboot bash /home/manish/src/jobPortal/start.sh
+@reboot bash /home/manish/src/callisto/start.sh
 CRONTAB
 
 #. start.sh
