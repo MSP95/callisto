@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom';
 import {Form, FormGroup ,Col, Label, Input, Nav, Button,  NavItem, NavbarBrand, Navbar, Collapse, NavbarToggler } from 'reactstrap';
 import Project from './project';
-import { FaGithub, FaFacebook, FaTwitter, FaLinkedin, FaGooglePlusG } from 'react-icons/fa';
 
 
 
@@ -20,10 +19,10 @@ function Contact(props) {
 </h2>
 
   <div><h1>
-    <a className="text-white" href="https://github.com/MSP95"><FaGithub className="mediaFa"/></a>&nbsp;
-      <a className="text-white" href="https://www.facebook.com/manishpatil1910"><FaFacebook className="mediaFa"/></a>&nbsp;
-        <a className="text-white" href="https://www.linkedin.com/in/p-manish/"><FaLinkedin className="mediaFa"/></a>&nbsp;
-          <a className="text-white" href="https://twitter.com/patilmanish1910"><FaTwitter className="mediaFa"/></a>&nbsp;
+    <a className="text-white" href="https://github.com/MSP95"><i className="fab fa-github mediaFa"></i></a>&nbsp;
+      <a className="text-white" href="https://www.facebook.com/manishpatil1910"><i className="fab fa-facebook-square mediaFa"></i></a>&nbsp;
+        <a className="text-white" href="https://www.linkedin.com/in/p-manish/"><i className="fab fa-linkedin mediaFa"></i></a>&nbsp;
+          <a className="text-white" href="https://twitter.com/patilmanish1910"><i className="fab fa-twitter mediaFa"></i></a>&nbsp;
 
      </h1></div>
 

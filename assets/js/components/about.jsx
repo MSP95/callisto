@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import { Nav, Button,  NavItem, NavbarBrand, Navbar, Collapse, NavbarToggler } from 'reactstrap';
-import { FaGithub, FaFacebook, FaTwitter, FaLinkedin, FaGooglePlusG, FaMapMarkerAlt, FaCode} from 'react-icons/fa';
 
 function About(props) {
 
@@ -15,13 +14,13 @@ function About(props) {
         <div className="name">
           MANISH PATIL
           <div className="sub">
-            <FaCode/> Web Developer <br></br>
-            <FaMapMarkerAlt/> Boston, MA.<br></br>
+            <i className="fas fa-code"></i> Web Developer <br></br>
+            <i className="fas fa-map-marker-alt"></i> Boston, MA.<br></br>
               <p>
-                <a className="text-white" href="https://github.com/MSP95"><FaGithub className="mediaFa"/></a>&nbsp;
-                  <a className="text-white" href="https://www.facebook.com/manishpatil1910"><FaFacebook className="mediaFa"/></a>&nbsp;
-                    <a className="text-white" href="https://www.linkedin.com/in/p-manish/"><FaLinkedin className="mediaFa"/></a>&nbsp;
-                      <a className="text-white" href="https://twitter.com/patilmanish1910"><FaTwitter className="mediaFa"/></a>&nbsp;
+                <a className="text-white" href="https://github.com/MSP95"><i className="fab fa-github mediaFa"></i></a>&nbsp;
+                  <a className="text-white" href="https://www.facebook.com/manishpatil1910"><i className="fab fa-facebook-square mediaFa"></i></a>&nbsp;
+                    <a className="text-white" href="https://www.linkedin.com/in/p-manish/"><i className="fab fa-linkedin mediaFa"></i></a>&nbsp;
+                      <a className="text-white" href="https://twitter.com/patilmanish1910"><i className="fab fa-twitter mediaFa"></i></a>&nbsp;
 
                  </p>
           </div>

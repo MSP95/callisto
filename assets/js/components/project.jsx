@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import { Nav, Button,  NavItem, NavbarBrand, Navbar, Collapse, NavbarToggler } from 'reactstrap';
 import Description from './projectDescription';
-import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 
 class Project extends React.Component {
@@ -69,7 +68,7 @@ class Project extends React.Component {
     }
     return(
     <div className="p-wrap">
-      <div className="p-back"><Link className="text-white" to="/projects"><FaLongArrowAltLeft/></Link></div>
+      <div className="p-back"><Link className="text-white" to="/projects"><i class="fas fa-arrow-left"></i></Link></div>
       <div className="p-info">
       <div className="p-title"><h1>{this.props.name}</h1> {intro()}</div>
 
