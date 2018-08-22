@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> -->
 </head>
 
@@ -28,5 +29,6 @@
   </main>
 
   <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
 </body>
 </html>

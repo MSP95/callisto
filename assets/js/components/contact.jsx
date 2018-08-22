@@ -9,7 +9,7 @@ import Project from './project';
 function Contact(props) {
   let submit=(data)=>{
     data.preventDefault();
-    console.log(data);
+    // console.log(data);
   }
 
   return (<div className="contacts">

@@ -54,11 +54,12 @@ class Routes extends React.Component{
                     render={({ location }) => (
 
                       <TransitionGroup className="transition-group">
-                        <CSSTransition key={location.key} classNames="fade" timeout={1000}>
+                        <CSSTransition key={location.key} classNames="fade" timeout={750}>
                           <div className="dcontent-wradpper ">
                             <Switch location={location}>
 
-                              <Route exact path="/" render={()=><About/>}/>
+                              <Route exact path="/" render={()=><div className="Enter"></div>}/>
+                              <Route exact path="/about" render={()=><About/>}/>
                               <Route path="/projects" exact render={()=><Projects/>}/>
                               <Route path="/skills" render={()=><div className="content-wradpper "><h1>Skills</h1><TextBlock/></div>}/>
                               <Route path="/contact" render={()=><Contact/>}/>
@@ -72,7 +73,7 @@ class Routes extends React.Component{
                   </div>
                 </div>
 
-                <Ham/>
+                <Ham location = {location}/>
               </div>
 
             <ul className="bg-bubbles">

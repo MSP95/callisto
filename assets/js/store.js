@@ -5,7 +5,7 @@ import {loadState} from './localStorage';
  const persistedState = loadState();
 
   let empty_navbar={
-    collapse: false
+    collapse: true
   }
 // let ="/images/bkg.jpg"
 let empty_image={
@@ -44,7 +44,7 @@ function loc(state=null, action){
 function root_reducer(state0 = persistedState, action) {
   let reducer = combineReducers({navBar, image, loc});
   let state1 = reducer(state0, action);
-  console.log("ReduxState", state1);
+  // console.log("ReduxState", state1);
   return deepFreeze(state1);
 };
 

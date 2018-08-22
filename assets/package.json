@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "classnames": "^2.2.6",
     "deep-freeze": "0.0.1",
     "jquery": "^3.3.1",
     "phoenix": "file:../deps/phoenix",
@@ -19,6 +20,7 @@
     "react-transition-group": "^2.4.0",
     "reactstrap": "^6.2.0",
     "redux": "^4.0.0",
+    "tilt.js": "^1.2.1",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
