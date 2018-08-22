@@ -13,6 +13,7 @@ import About from "./about";
 import Ham from "./hamburger";
 import Project from "./project"
 import Contact from "./contact"
+import Enter from "./enter"
 
 export default function home_init(root, store){
   ReactDOM.render(<Provider store={store}><App state={store.getState()} /></Provider>, root);
@@ -58,7 +59,7 @@ class Routes extends React.Component{
                           <div className="dcontent-wradpper ">
                             <Switch location={location}>
 
-                              <Route exact path="/" render={()=><div className="Enter"></div>}/>
+                              <Route exact path="/" render={()=><Enter/>}/>
                               <Route exact path="/about" render={()=><About/>}/>
                               <Route path="/projects" exact render={()=><Projects/>}/>
                               <Route path="/skills" render={()=><div className="content-wradpper "><h1>Skills</h1><TextBlock/></div>}/>

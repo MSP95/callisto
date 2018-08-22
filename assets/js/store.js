@@ -26,7 +26,8 @@ let empty_image={
 
       case 'TOGGLE_NAV' :
       return Object.assign({}, state, {collapse: !state.collapse});
-
+      case 'TOGGLE_NAV_TRUE' :
+      return Object.assign({}, state, {collapse: true});
       default:
       return state;
     }
