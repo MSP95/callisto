@@ -2,6 +2,7 @@
 
 My online portfolio created using React, react-router, SASS.  
 
+Live link: [here](https://me.manishpatil.net)
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
