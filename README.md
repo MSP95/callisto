@@ -1,5 +1,7 @@
 # Callisto
 
+My online portfolio created using React, react-router, SASS.  
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
